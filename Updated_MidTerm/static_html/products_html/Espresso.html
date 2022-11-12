@@ -125,14 +125,16 @@
                 </div>
             </nav>
             <div class="flex-box-item">
-            <form method="post">
+            <form method="post" onsubmit="return validateForm()" name="review">
                 <div class="flex_nav">
                 <h1>Give Us Feedback</h1>
 
                 <input class="form_item" name="uname" type="text">
                 <label for="uname">Name</label>
+                <p class="field_error"></p>
                 <input class="form_item" type="email" name="email">
                 <label for="email">Email</label><br>
+                <p class="field_error"></p>
                 <select class="form_item" name="drink" id="sel-drink">
                     <option value="1">Coldbrew</option>
                     <option value="2">French Roast</option>
@@ -142,7 +144,8 @@
                     <option value="6">Americano</option>
                 </select>
                 <textarea class="form_item" name="feedback" id="tarea" cols="30" rows="10">Give us your feed back!</textarea>
-                <button class="btn form_item" type="submit" style="background-color: #D2B48C;">Submit</button>
+                <p class="field_error"></p>
+                <button class="btn form_item" type="submit" id="sub_but" style="background-color: #D2B48C;">Submit</button>
     
             </div>
             </form> 
@@ -155,4 +158,5 @@
     <p><i>Site Design/ Logo</i></p>
 </footer>
 </body>
+<script src="../../static_js/products.js"></script>
 </html>

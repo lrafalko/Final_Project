@@ -25,7 +25,12 @@ function validateForm() {
         
 
     else if (reviewForm.email.value == "") {
-        alert("All fields must be filled");
+        return false;
+    
+    }
+
+
+    else if (reviewForm.feedback.value == "") {
         return false; 
     }
 
