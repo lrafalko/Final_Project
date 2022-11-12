@@ -135,6 +135,39 @@ nav ul{
   display: inline-block;
 }
 
+.seasonal_container {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.seasonal_objects {
+  padding: 5px;
+  margin: 5px;
+  background-color: #333; 
+
+}
+
+.scroll_ele {
+  opacity: 0;
+  transition: opacity 1000ms;
+
+}
+
+.scroll_ele.scrolled {
+  opacity: 1;
+}
+
+.seasonal_objects img {
+  height: 300px;
+  width: 300px;
+  margin: 5px; 
+}
+
+
 footer{
   padding: 10px 20px;
   margin-top: 15px;
