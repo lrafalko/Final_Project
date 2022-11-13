@@ -6,6 +6,27 @@ scroll_ele.forEach((element) => {
     element.style.opacity = 0; 
 });
 
+const showText = (ele) => {
+    ele.classList.add("entered");
+    ele.parentElement.classList.add("season_background")
+
+
+}
+
+const hideText = (ele) => {
+
+    ele.parentElement.classList.remove("season_background")
+
+
+}
+
+scroll_ele.forEach((element) =>
+    {
+    element.addEventListener("mouseenter", () => {showText(element)});
+    element.addEventListener("mouseleave", () => {hideText(element)}); 
+    }
+)
+
 
 
 const eleInView = (el, percentScroll = 100) => {
@@ -43,7 +64,10 @@ const checkAnimation = () => {
 
 window.addEventListener("scroll", () => {
     checkAnimation();
-}); 
+});
+
+
+
 
 
 
